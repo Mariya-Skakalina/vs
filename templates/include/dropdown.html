@@ -1,0 +1,10 @@
+<div class="btn-group mt-3">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Все стихи
+    </button>
+    <div class="dropdown-menu">
+        {% for i in genre %}
+            <a class="dropdown-item" href="/genre/{{ i.id }}">{{ i }}</a>
+        {% endfor %}
+    </div>
+</div>

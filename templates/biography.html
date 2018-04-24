@@ -1,0 +1,15 @@
+{% extends 'bases_generic'%}
+
+{% block content %}
+    {% include 'include/header.html' %}
+    {% include 'include/navbar.html' %}
+    <div>
+        <div class="container m-5">
+            {% for i in object_list %}
+                {{ i|safe }}
+            {% endfor %}
+        </div>
+    </div>
+    <hr>
+
+{% endblock %}

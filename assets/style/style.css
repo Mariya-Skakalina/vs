@@ -1,0 +1,43 @@
+body{
+    background-color: #DEFCF7;
+}
+a.text-decoration{
+    text-decoration: none;
+    color: rgb(148, 65, 21);
+    font-family: 'Marck Script', cursive;
+    position: relative;
+}
+a.pages {
+    text-decoration: none;
+    color: midnightblue
+}
+
+a.text-decoration:after {
+    background-color: #313131;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    left:50%;
+    position:absolute;
+    -webkit-transition: width .5s ease-in-out;
+    -moz-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    transform:translateX(-50%);
+}
+a.text-decoration:hover:after,
+a.text-decoration:focus:after {
+    width: 100%;
+}
+
+a.text-decoration:hover {
+    color: black;
+  }
+  #wrap{
+	clear: both;
+}
+.alegreya{
+    font-family: 'Alegreya', serif;
+}

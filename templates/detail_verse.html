@@ -1,0 +1,9 @@
+{% extends 'bases_generic' %}
+{% block content %}
+    {% include 'include/header.html' %}
+    {% include 'include/navbar.html' %}
+    <div class="mt-5">
+        <h3 class="display-5 text-center font-weight-bold alegreya">{{ object.title }}</h3>
+        <p>{{ object.verses|safe }}</p>
+    </div>
+{% endblock %}
