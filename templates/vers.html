@@ -10,28 +10,64 @@
     {% endfor %}
 
     {% if is_paginated %}
-            <nav aria-label="Page navigation example">
-                <ul class="pagination">
+        <div class="pop">
+                <ul class="pagination modal-3">
                     {% if page_obj.has_previous %}
-                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous </a></li>
+                        <li><a class="prev" href="?page={{ page_obj.previous_page_number }}">&laquo</a></li>
                     {% else %}
-                        <li class="page-item"><a class="page-link" href="#">Previous </a></li>
+                       <li><a class="prev" href="?page={{ i }}">{{ i }}</a></li>
                     {% endif %}
                     {% for i in paginator.num_pages|ranges_s %}
                         {% if page_obj.number == i %}
-                            <li class="page-item active"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                            <li><a class="active" href="?page={{ i }}">{{ i }}</a></li>
                         {% else %}
-                            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
-
+                            <li><a href="?page={{ i }}">{{ i }}</a></li>
                         {% endif %}
                     {% endfor %}
-                {% if page_obj.has_next %}
-                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
-                {% else %}
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                {% endif %}
+                    {% if page_obj.has_next %}
+                        <li><a class="next" href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+                    {% else %}
+                        <li><a class="next" href="#"></a></li>
+                    {% endif %}
                 </ul>
-            </nav>
-        {% endif %}
+        </div>
+    {% endif %}
+{#                <li><a href="#" class="prev">&laquo</a></li>#}
+{#                <li><a href="#" class="active">1</a></li>#}
+{#                <li> <a href="#">2</a></li>#}
+{#                <li> <a href="#">3</a></li>#}
+{#                <li> <a href="#">4</a></li>#}
+{#                <li> <a href="#">5</a></li>#}
+{#                <li> <a href="#">6</a></li>#}
+{#                <li> <a href="#">7</a></li>#}
+{#                <li> <a href="#">8</a></li>#}
+{#                <li> <a href="#">9</a></li>#}
+{#                <li><a href="#" class="next">&raquo;</a></li>#}
+{#            </ul>#}
+{#        </div>#}
+
+{#    {% if is_paginated %}#}
+{#            <nav aria-label="Page navigation example">#}
+{#                <ul class="pagination">#}
+{#                    {% if page_obj.has_previous %}#}
+{#                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous </a></li>#}
+{#                    {% else %}#}
+{#                        <li class="page-item"><a class="page-link" href="#">Previous </a></li>#}
+{#                    {% endif %}#}
+{#                    {% for i in paginator.num_pages|ranges_s %}#}
+{#                        {% if page_obj.number == i %}#}
+{#                            <li class="page-item active"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>#}
+{#                        {% else %}#}
+{#                            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>#}
+{#                        {% endif %}#}
+{#                    {% endfor %}#}
+{#                {% if page_obj.has_next %}#}
+{#                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>#}
+{#                {% else %}#}
+{#                    <li class="page-item"><a class="page-link" href="#">Next</a></li>#}
+{#                {% endif %}#}
+{#                </ul>#}
+{#            </nav>#}
+{#        {% endif %}#}
 
 {% endblock %}

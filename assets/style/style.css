@@ -41,3 +41,49 @@ a.text-decoration:hover {
 .alegreya{
     font-family: 'Alegreya', serif;
 }
+.pop{
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em
+}
+.pagination {
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .pagination li {
+    display: inline;
+    text-align: center;
+  }
+  .pagination a {
+    font-size: 21px;
+    text-decoration: none;
+    padding: 5px 12px;
+    color: black;
+    margin-left: -1px;
+    border: 1px solid transparent;
+    line-height: 1.5;
+
+  }
+  .pagination a.active {
+    cursor: default;
+  }
+  .pagination a:active {
+    outline: none;
+  }
+  .modal-3 a {
+    display: inline-block;
+    margin-left: 3px;
+    padding: 0;
+    width: 30px;
+    height: 2px;
+    line-height: 30px;
+  }
+  .modal-3 a:hover {
+    background-color: blue;
+  }
+  .modal-3 a.active, .modal-3 a:active {
+    background-color: lightslategrey;
+  }
